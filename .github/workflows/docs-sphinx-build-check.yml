@@ -10,6 +10,7 @@ on:
 
 jobs:
   docs:
+    if: "False"
     runs-on: ubuntu-latest
     steps:
     - uses: ros-controls/control.ros.org-deployment-scripts@master

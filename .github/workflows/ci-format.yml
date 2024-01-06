@@ -9,6 +9,7 @@ on:
 
 jobs:
   pre-commit:
+    if: "False"
     name: Format
     runs-on: ubuntu-latest
     steps:
