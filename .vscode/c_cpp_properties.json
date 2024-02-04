@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/felipe/dev_ws/install/odrive_can_hw_interface/include/**",
+        "/home/felipe/dev_ws/install/examples_rclcpp_cbg_executor/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/felipe/dev_ws/src/examples/rclcpp/composition/minimal_composition/include/**",
+        "/home/felipe/dev_ws/src/examples/rclcpp/executors/cbg_executor/include/**",
+        "/home/felipe/dev_ws/src/examples/rclcpp/wait_set/include/**",
+        "/home/felipe/dev_ws/src/odrive_can_hw_interface/include/**",
+        "/home/felipe/dev_ws/src/scara_description/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

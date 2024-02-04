@@ -17,6 +17,7 @@ add_library(
   SHARED
   src/odrive_can_hw_interface.cpp
 )
+
 target_include_directories(
   odrive_can_hw_interface
   PUBLIC
@@ -58,10 +59,16 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   # ament_lint_auto_find_test_dependencies()
   find_package(ament_cmake_gmock REQUIRED)
+  find_package(ament_cmake_gtest REQUIRED)
   find_package(ros2_control_test_assets REQUIRED)
 
   ament_add_gmock(test_odrive_can_hw_interface test/test_odrive_can_hw_interface.cpp)
   target_include_directories(test_odrive_can_hw_interface PRIVATE include)
+  
+  ament_add_gtest(test_lib lib/odrive_can/test/main.cpp)
+  target_include_directories(test_lib PRIVATE lib/odrive_can/include)
+  target_link_libraries(test_lib odrive_can_hw_interface)
+  
   ament_target_dependencies(
     test_odrive_can_hw_interface
     hardware_interface
